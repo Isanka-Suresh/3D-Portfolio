@@ -19,6 +19,15 @@ body {
 
 }
 
+.instructions{
+    position: absolute;
+    font-family: "Lilita One", sans-serif;
+    font-size: 48px;
+    left: 34%;
+    display: flex;
+    justify-content: center;
+}
+
 .cube-container {
     color: white;
     display: flex;
@@ -610,10 +619,11 @@ a {
 
 .mailContainer{
     position: relative;
-    bottom: 20%;
+    bottom: 25%;
     left: 50%;
-    width: 40%;
+    width: 45%;
     height: 100%;
+    border-left: 2px solid black;
 }
 
 .whatsappContainer{
@@ -622,6 +632,7 @@ a {
     left: 5%;
     width: 40%;
     height: 40%;
+    
 }
 
 .waqr{
@@ -663,4 +674,14 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.socialSubTopic{
+    position: relative;
+    font-size: 20px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    margin-bottom:10px;
+    text-shadow: 2px 2px 10px black;
 }
