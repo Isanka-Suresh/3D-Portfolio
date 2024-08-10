@@ -1,0 +1,542 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background: rgb(255, 255, 255);
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+
+}
+
+.cube-container {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    perspective: 2000px;
+}
+
+.cube {
+    -webkit-user-select: none;
+    /* Safari */
+    -ms-user-select: none;
+    /* IE 10 and IE 11 */
+    user-select: none;
+    /* Standard syntax */
+    width: 600px;
+    aspect-ratio: 1/1;
+    transform-style: preserve-3d;
+}
+
+.cube-face {
+    width: 600px;
+    aspect-ratio: 1/1;
+    background-color: rgb(38, 159, 211);
+    outline: 4px solid rgb(202, 202, 202);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+
+.cube-container .front {
+    transform: translateZ(300px);
+}
+
+.cube-container .back {
+    transform: rotateY(180deg) translateZ(300px);
+}
+
+.cube-container .left {
+    transform: rotateY(-90deg) translateZ(300px);
+}
+
+.cube-container .right {
+    transform: rotateY(90deg) translateZ(300px);
+}
+
+.cube-container .top {
+    transform: rotateX(90deg) translateZ(300px);
+}
+
+.cube-container .bottom {
+    transform: rotateX(-90deg) translateZ(300px);
+}
+
+/*/////////////// front //////////////////*/
+
+
+.front-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.greetTop {
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 48px;
+    text-shadow: 2px 2px rgb(230, 95, 151);
+    color: azure;
+    width: 50%;
+    position: relative;
+    top: 5%;
+    left: 5%;
+}
+
+.greetDown {
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 64px;
+    text-shadow: 2px 2px rgb(230, 95, 151);
+    color: rgb(255, 255, 255);
+    width: 50%;
+    position: relative;
+    top: 5%;
+    left: 5%;
+}
+
+.pics {
+    position: relative;
+    bottom: 55%;
+    left: 45%;
+}
+
+.pfp {
+    width: 64%;
+
+}
+
+.self {
+    position: relative;
+    color: rgb(255, 255, 255);
+    top: 10%;
+    left: 5%;
+    font-weight: 400;
+    font-size: 28px;
+}
+
+.texts {
+    box-sizing: content-box;
+    overflow: hidden;
+    display: grid;
+    height: 34px;
+    position: relative;
+    top: 4%;
+    left: 20%;
+}
+
+.words {
+    color: white;
+    font-size: 32px;
+    display: block;
+    animation: spin_words 12s infinite;
+}
+
+.intro {
+    position: relative;
+    color: rgb(255, 255, 255);
+    line-height: 18px;
+    width: 50%;
+    height: 25%;
+    top: 15%;
+    left: 5%;
+    font-weight: 100;
+    font-size: 14px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.downBtn {
+    width: 120px;
+    height: 40px;
+    background-color: #7BE0AD;
+    color: black;
+    border-radius: 25px;
+    position: relative;
+    top: 25%;
+    left: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes spin_words {
+    10% {
+        transform: translateY(-112%);
+    }
+
+    25% {
+        transform: translateY(-100%);
+    }
+
+    35% {
+        transform: translateY(-212%);
+    }
+
+    50% {
+        transform: translateY(-200%);
+    }
+
+    60% {
+        transform: translateY(-312%);
+    }
+
+    75% {
+        transform: translateY(-300%);
+    }
+
+    85% {
+        transform: translateY(-412%);
+    }
+
+    100% {
+        transform: translateY(-400%);
+    }
+}
+
+/*/////////////// right //////////////////*/
+
+.right-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.project-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.topic {
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 48px;
+    text-shadow: 2px 2px rgb(230, 95, 151);
+    color: azure;
+    position: relative;
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
+    top: 2%;
+}
+
+.project-pages {
+    position: relative;
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    bottom: 5%;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-wrap: wrap;
+    display: none;
+    align-items: center;
+}
+
+.project {
+    position: relative;
+    width: 100%;
+    height: 40%;
+    margin-top: 9%;
+    border-radius: 15px;
+    background-color: rgb(255, 255, 255);
+}
+
+.project:hover .projectBtn {
+    display: block;
+}
+
+.projectImgContainer {
+    position: relative;
+    height: 100%;
+    width: 50%;
+}
+
+.projectImg {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.projectTopic{
+    position: relative;
+    color: black;
+    font-weight: 500;
+    font-size: 20px;
+    bottom: 100%;
+    left: 52%;
+}
+
+.projectDesc {
+    position: relative;
+    color: black;
+    line-height: 18px;
+    font-weight: 400;
+    font-size: 14px;
+    width: 45%;
+    bottom: 98%;
+    left: 52%;
+}
+
+.projectTools {
+    position: relative;
+    bottom: 90%;
+    left: 52%;
+    width: 50%;
+    color: black;
+}
+
+.toolTitle {
+    position: relative;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    font-weight: 600;
+    width: 10%;
+}
+
+.tool {
+    position: relative;
+    width: 10%;
+    display: flex;
+
+}
+
+.toolIcon {
+    position: relative;
+    width: 32px;
+    left: 15%;
+    margin-right: 5px;
+}
+
+.projectBtn {
+    position: absolute;
+    display: none;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    margin-top: 9%;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.596);
+}
+
+.seeBtn {
+    position: relative;
+    left: 45%;
+    top: 40%;
+    width: 100px;
+    height: 48px;
+    border-radius: 15px;
+    border: 3px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.seeBtn:hover {
+    background-color: black;
+}
+
+.slideHandlers {
+    position: relative;
+    bottom: 62%;
+    left: 10%;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+/*/////////////// Left //////////////////*/
+
+.left-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.toolTopic {
+    position: relative;
+    font-size: 32px;
+}
+
+.toolSubTopic {
+    position: relative;
+    font-size: 24px;
+}
+
+.techs {
+    position: relative;
+    top: 5%;
+    width: 100%;
+    height: 8%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tech {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.techIcon {
+    position: relative;
+    width: 32px;
+    height: 32px;
+    left: 2%;
+    border: 2px solid black;
+    border-radius: 8px;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.techIcon:hover + .techName + .techDesc {
+    display: block;
+}
+
+.techName {
+    position: relative;
+    height: 20px;
+    width: 50px;
+    font-size: 16px;
+    top: 0;
+    left: 4%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.techDesc {
+    position: relative;
+    display: none;
+    top: 60px;
+    right: 8%;
+    width: 250px;
+    height: 100px;
+    font-size: 12px;
+    color: black;
+    padding: 4px;
+    border-radius: 10px;
+    background-color: antiquewhite;
+    justify-content: center;
+    align-items: center;
+}
+
+/*/////////////// Back //////////////////*/
+
+.back-container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.backTopic {
+    position: relative;
+    font-size: 32px;
+}
+
+.socialIcons{
+    position: relative;
+    width: 25%;
+    aspect-ratio: 1/1;
+    background-color: #7BE0AD;
+}
+
+.social{
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1/1;
+    background-color: aqua;
+}
+
+.fi-brands-facebook{
+    position: relative;
+    font-size: 64px;
+    color: black;
+}
