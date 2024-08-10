@@ -9,7 +9,7 @@ a{
 body {
     height: 100vh;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background: rgb(255, 255, 255);
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 }
 
 .container {
@@ -42,8 +42,8 @@ body {
 .cube-face {
     width: 600px;
     aspect-ratio: 1/1;
-    background-color: rgb(38, 159, 211);
-    outline: 4px solid rgb(202, 202, 202);
+    background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+    outline: 3px solid rgb(255, 255, 255);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -165,7 +165,7 @@ a{
 .downBtn {
     width: 120px;
     height: 40px;
-    background-color: #7BE0AD;
+    background-image: linear-gradient(to top, #f77062 0%, #fe5196 100%);
     color: black;
     border-radius: 25px;
     position: relative;
@@ -255,6 +255,7 @@ a{
 
 .project {
     position: relative;
+    box-shadow: 15px 15px 12px 0px rgba(0,0,0,0.1);
     width: 100%;
     height: 40%;
     margin-top: 9%;
@@ -439,37 +440,48 @@ a{
     font-size: 32px;
 }
 
+.toolset{
+    position: relative;
+    margin-top:35px;
+}
+
 .toolSubTopic {
     position: relative;
+    top: 2%;
+    left: 2%;
+    margin-bottom: 8px;
     font-size: 24px;
+    text-shadow: 1px 2px 20px black;
 }
 
 .techs {
     position: relative;
-    top: 5%;
+    top: 3%;
+    left: 2%;
+    margin-bottom: 20px;
     width: 100%;
-    height: 8%;
+    height: 20%;
     display: flex;
-    flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .tech {
     position: relative;
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: left;
+    display: flex;  
     align-items: center;
+    justify-content: center;
 }
 
 .techIcon {
     position: relative;
-    width: 32px;
-    height: 32px;
+    width: 40px;
+    height: 40px;
     left: 2%;
-    border: 2px solid black;
+    background-color: white;
+    
     border-radius: 8px;
     font-size: 24px;
     display: flex;
@@ -478,37 +490,33 @@ a{
 
 }
 
+.techIconImg {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-.techIcon:hover + .techName + .techDesc {
-    display: block;
+}
+
+.techIcon:hover  {
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+
 }
 
 .techName {
     position: relative;
     height: 20px;
     width: 50px;
-    font-size: 16px;
+    font-size: 14px;
     top: 0;
-    left: 4%;
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.techDesc {
-    position: relative;
-    display: none;
-    top: 60px;
-    right: 8%;
-    width: 250px;
-    height: 100px;
-    font-size: 12px;
+    left: 5%;
     color: black;
-    padding: 4px;
-    border-radius: 10px;
-    background-color: antiquewhite;
-    justify-content: center;
+    display: flex;
+    justify-content: start;
     align-items: center;
 }
 
