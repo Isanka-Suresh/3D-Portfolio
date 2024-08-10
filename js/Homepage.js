@@ -28,12 +28,18 @@ const handleTouchMove = (event) => {
   cube.style.transform = `rotateX(${lastRotateX + currentRotateX}deg) rotateY(${lastRotateY + currentRotateY}deg)`;
 };
 
-const startMouseMove = () => {
-  window.addEventListener("mousemove", handleMouseMove);
+const startMouseMove = (event) => {
+  // Check if the click is not on an input field
+  if (!event.target.classList.contains('text-input')) {
+      window.addEventListener("mousemove", handleMouseMove);
+  }
 };
 
-const startTouchMove = () => {
-  window.addEventListener("touchmove", handleTouchMove);
+const startTouchMove = (event) => {
+  // Check if the touch is not on an input field
+  if (!event.target.classList.contains('text-input')) {
+      window.addEventListener("touchmove", handleTouchMove);
+  }
 };
 
 const stopMouseMove = () => {
@@ -48,12 +54,29 @@ const stopTouchMove = () => {
   lastRotateY += currentRotateY;
 };
 
+// Disable cube rotation while focusing on input fields
+const disableCubeRotation = () => {
+  window.removeEventListener("mousedown", startMouseMove);
+  window.removeEventListener("touchstart", startTouchMove);
+};
+
+const enableCubeRotation = () => {
+  window.addEventListener("mousedown", startMouseMove);
+  window.addEventListener("touchstart", startTouchMove);
+};
+
 // Add event listeners for mouse and touch interactions
 window.addEventListener("mousedown", startMouseMove);
 window.addEventListener("mouseup", stopMouseMove);
 window.addEventListener("touchstart", startTouchMove);
 window.addEventListener("touchend", stopTouchMove);
 
+// Add focus and blur event listeners to the form inputs
+const inputs = document.querySelectorAll('.text-input');
+inputs.forEach(input => {
+  input.addEventListener('focus', disableCubeRotation);
+  input.addEventListener('blur', enableCubeRotation);
+});
 
 // Next/previous controls
 function plusSlides(n) {
@@ -80,3 +103,6 @@ function showSlides(n) {
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
 }
+
+
+

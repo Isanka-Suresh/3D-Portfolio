@@ -2,7 +2,8 @@
     margin: 0;
     padding: 0;
 }
-a{
+
+a {
     text-decoration: none;
 }
 
@@ -158,7 +159,7 @@ body {
     font-size: 14px;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
@@ -255,7 +256,7 @@ a{
 
 .project {
     position: relative;
-    box-shadow: 15px 15px 12px 0px rgba(0,0,0,0.1);
+    box-shadow: 15px 15px 12px 0px rgba(0, 0, 0, 0.1);
     width: 100%;
     height: 40%;
     margin-top: 9%;
@@ -282,7 +283,7 @@ a{
     border-bottom-left-radius: 15px;
 }
 
-.projectTopic{
+.projectTopic {
     position: relative;
     color: black;
     font-weight: 500;
@@ -440,9 +441,9 @@ a{
     font-size: 32px;
 }
 
-.toolset{
+.toolset {
     position: relative;
-    margin-top:35px;
+    margin-top: 35px;
 }
 
 .toolSubTopic {
@@ -470,7 +471,7 @@ a{
     position: relative;
     width: 100%;
     height: 100%;
-    display: flex;  
+    display: flex;
     align-items: center;
     justify-content: center;
 }
@@ -481,7 +482,7 @@ a{
     height: 40px;
     left: 2%;
     background-color: white;
-    
+
     border-radius: 8px;
     font-size: 24px;
     display: flex;
@@ -500,7 +501,7 @@ a{
 
 }
 
-.techIcon:hover  {
+.techIcon:hover {
     width: 50px;
     height: 50px;
     border: 1px solid black;
@@ -522,7 +523,7 @@ a{
 
 /*/////////////// Back //////////////////*/
 
-.back-container{
+.back-container {
     position: relative;
     width: 100%;
     height: 100%;
@@ -533,22 +534,133 @@ a{
     font-size: 32px;
 }
 
-.socialIcons{
+.socialGrid {
     position: relative;
-    width: 25%;
-    aspect-ratio: 1/1;
-    background-color: #7BE0AD;
+    top: 10%;
+    margin: auto;
+    width: 80%;
+    height: 70%;
+    display: grid;
+    gap: 4px 4px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
 }
 
-.social{
+.socialIcons {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.socialIcon {
+    position: relative;
+    width: 64px;
+}
+
+.facebook {
+    grid-area: span 1 / span 1;
+}
+
+.instagram {
+    grid-area: span 2 / span 1;
+}
+
+.linkedin {
+    grid-area: span 1/ span 1;
+}
+
+.github {
+    grid-area: 2 / span 2;
+}
+
+.facebook:hover {
+    background-color: #3b5998;
+}
+
+.instagram:hover {
+    background: #833ab4;
+    background: linear-gradient(
+            #833ab4, #fd1d1d, #fcb045);
+}
+
+.linkedin:hover {
+    background-color: #0b69c7;
+}
+
+.github:hover {
+    background-color: #061110;
+}
+
+/*/////////////// bottom //////////////////*/
+
+.bottom-container {
     position: relative;
     width: 100%;
-    aspect-ratio: 1/1;
-    background-color: aqua;
+    height: 100%;
 }
 
-.fi-brands-facebook{
+.contact-container{
     position: relative;
-    font-size: 64px;
+    width: 100%;
+    height: 70%;
+}
+
+.mailContainer{
+    position: relative;
+    bottom: 20%;
+    left: 50%;
+    width: 40%;
+    height: 100%;
+}
+
+.whatsappContainer{
+    position: relative;
+    top: 15%;
+    left: 5%;
+    width: 40%;
+    height: 40%;
+}
+
+.waqr{
+    position: relative;
+    width: 100%;
+    border-radius: 15px;
+}
+
+.text-input{
+    position: relative;
+    top: 15%;
+    left: 5%;
+    width: 250px;
+    height: 32px;
+    border: none;
+    outline: none;
+    margin-top: 10px;
+    font-weight: 500;
+    padding-left: 25px;
+    border-radius: 15px;
+    margin-bottom: 5px;
+}
+
+.message{
+    height: 140px;
+    padding-top: 15px;
+    border-radius: 20px;
+}
+
+.emailSubmit{
+    width: 120px;
+    height: 40px;
+    background-image: linear-gradient(to top, #f77062 0%, #fe5196 100%);
     color: black;
+    border-radius: 25px;
+    position: relative;
+    top: 25%;
+    left: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
