@@ -2,6 +2,9 @@
     margin: 0;
     padding: 0;
 }
+a{
+    text-decoration: none;
+}
 
 body {
     height: 100vh;
@@ -346,6 +349,7 @@ a{
     width: 100px;
     height: 48px;
     border-radius: 15px;
+    color: white;
     border: 3px solid white;
     display: flex;
     justify-content: center;
