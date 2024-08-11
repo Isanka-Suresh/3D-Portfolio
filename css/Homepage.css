@@ -23,7 +23,7 @@ body {
     position: absolute;
     font-family: "Lilita One", sans-serif;
     font-size: 48px;
-    left: 34%;
+    width: 100%;
     display: flex;
     justify-content: center;
 }
@@ -121,12 +121,12 @@ body {
 
 .pics {
     position: relative;
-    bottom: 55%;
-    left: 45%;
+    bottom: 89%;
+    left: 30%;
 }
 
 .pfp {
-    width: 64%;
+    width: 90%;
 
 }
 
