@@ -610,7 +610,6 @@ a {
 .bottom-container {
     position: relative;
     width: 100%;
-    display: none;
     height: 100%;
 }
 
