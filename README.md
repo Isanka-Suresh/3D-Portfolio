@@ -4,8 +4,8 @@ Welcome to the **3D-Portfolio** project! This repository contains the source cod
 
 ## Preview
 
-![Portfolio Preview 1](assets/homepage/img/portfolio%2001.png)
-![Portfolio Preview 2](assets/homepage/img/portfolio%2002.png)
+![Portfolio Preview 1](assets/portfolio%2001.png)
+![Portfolio Preview 2](assets/portfolio%2002.png)
 
 ## Features
 
